@@ -7,7 +7,7 @@ const port = 5000;
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = process.env.API_KEY || "";
 
-// Fonction pour récupérer la liste des genres
+
 app.use(cors());
 
 async function getGenres() {

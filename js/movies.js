@@ -27,7 +27,6 @@ document.getElementById("prevPage").addEventListener("click", () => {
         updatePagination();
         fetchMovies(currentPage);
     }
-    console.log("film totals", movies);
 
 });
 
@@ -48,7 +47,6 @@ function updatePagination() {
 }
 
 
-// ✅ Attendre que `fetchMovies()` ait fini avant de charger la page
 document.addEventListener("DOMContentLoaded", async () => {
     console.log("Chargement du DOM...");
 
@@ -57,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     populateFilters();
     displayMovies(movies);
 
-    // Reset filters button functionality
+
     const resetButton = document.getElementById("resetFilters");
     resetButton.addEventListener("click", () => {
         document.getElementById("genreFilter").value = "";
@@ -148,6 +146,7 @@ function applyFilters() {
     displayMovies(filteredMovies);
 }
 
+// algorithme de recommandation
 function recommendMovie(selectedMovie) {
     const movieScore = [];
     const filteredMovies = movies.filter(movie => movie.title !== selectedMovie.title);
