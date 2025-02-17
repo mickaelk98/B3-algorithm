@@ -89,3 +89,6 @@ app.get("/", async (req, res) => {
 app.listen(port, () => {
     console.log(`Serveur lancé sur le port: ${port}`);
 });
+
+
+module.exports = app;
