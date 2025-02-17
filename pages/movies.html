@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Films - Tri et Filtrage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/movies.js" defer></script>
+  </head>
+  <body class="bg-gray-900 text-white p-6">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-3xl font-bold text-center mb-6">🎬 Catalogue de Films</h1>
+
+      <!-- Filtres -->
+      <div class="flex flex-wrap justify-center gap-4 mb-6">
+        <select id="genreFilter" class="p-2 bg-gray-800 text-white rounded">
+          <option value="">🎭 Tous les genres</option>
+        </select>
+        <select id="ratingFilter" class="p-2 bg-gray-800 text-white rounded">
+          <option value="">⭐ Toutes les notes</option>
+        </select>
+        <select id="sortOption" class="p-2 bg-gray-800 text-white rounded">
+          <option value="">🔽 Trier par</option>
+          <option value="rating">⭐ Note</option>
+          <option value="duration">⏳ Durée</option>
+        </select>
+        <button
+          onclick="applyFilters()"
+          class="bg-green-400 hover:bg-green-500 text-black px-4 py-2 rounded font-semibold"
+        >
+          Filtrer
+        </button>
+        <button
+          id="resetFilters"
+          class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-semibold"
+        >
+          Réinitialiser
+        </button>
+      </div>
+
+      <!-- Conteneur des films -->
+      <div
+        id="movieContainer"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
+      <div class="pagination flex justify-center mt-6 gap-6">
+        <button id="prevPage" disabled>⬅️ Précédent</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Suivant ➡️</button>
+      </div>
+    </div>
+  </body>
+</html>

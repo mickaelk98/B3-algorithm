@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithmes de tri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/sortAlgo.js" defer></script>
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center"
+  >
+    <div
+      class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl text-center"
+    >
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">Algorithmes de tri</h1>
+      <p class="text-lg text-gray-600 mb-6">
+        Cliquez sur un algorithme pour trier le tableau.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <button
+          id="bubbleSort"
+          class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+        >
+          Tri à bulles
+        </button>
+        <button
+          id="insertionSort"
+          class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
+        >
+          Tri par insertion
+        </button>
+        <button
+          id="selectionSort"
+          class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition"
+        >
+          Tri par sélection
+        </button>
+        <button
+          id="quickSort"
+          class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition"
+        >
+          Tri rapide
+        </button>
+        <button
+          id="mergeSort"
+          class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition col-span-2"
+        >
+          Tri fusion
+        </button>
+      </div>
+
+      <h2 class="text-xl font-semibold text-gray-700">Tableau non trié</h2>
+      <p class="nonsortedarray bg-gray-200 p-3 rounded my-2"></p>
+      <h2 class="text-xl font-semibold text-gray-700 mt-4">Tableau trié</h2>
+      <h3 class="algoname font-semibold text-gray-800"></h3>
+      <p class="time text-gray-500"></p>
+      <p class="sortedarray bg-gray-200 p-3 rounded my-2"></p>
+    </div>
+  </body>
+</html>
